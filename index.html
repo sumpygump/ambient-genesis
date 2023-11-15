@@ -1,16 +1,25 @@
-<html>
+<!doctype html>
+<html class="no-js" lang="en">
     <head>
+        <meta charset="utf-8">
+        <title>Ambient Genesis</title>
+        <meta name="description" content="Click play and see what you get">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 html {
     background-color: #424142;
     color: #ffffff;
 }
-#sounds {display: flex; margin: 0 auto; width: 550px; justify-content: space-evenly;}
+#sounds {
+    display: flex;
+    margin: 0 auto;
+    max-width: 550px;
+    justify-content: space-evenly;
+}
 .audio {
     display: flex;
     flex-direction: column;
 }
-#btns {display: flex; margin: 0 auto; width: 350px; justify-content: center;}
 input[type="range"] {
     width: 28px;
     appearance: slider-vertical;
@@ -21,6 +30,12 @@ input[type="range"] {
     flex-direction: row;
     justify-content: center;
     margin: 40px;
+}
+#ctrls button {
+    margin: 0 10px;
+    display: block;
+    padding: 10px;
+    width: 100px;
 }
 </style>
     </head>
