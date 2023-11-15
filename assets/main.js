@@ -11,21 +11,21 @@ const ready = (fn) => {
 
 const App = {
     files: [
-        '001-beginning-looped.ogg',
-        '002-white-mountain-looped.ogg',
-        '003-dusk-looped.ogg',
-        '004-salmacis-looped.ogg',
-        '005-suppers-ready-looped.ogg',
-        '006-wardrobe-looped.ogg',
-        '007-fly-looped.ogg',
-        '008-waiting-room-looped.ogg',
-        '009-slippermen-looped.ogg',
-        '010-ravine-looped.ogg',
-        '011-ripples-looped.ogg',
-        '012-unquiet-slumbers-looped.ogg',
-        '013-down-and-out-looped.ogg',
-        '014-duchess-looped.ogg',
-        'moonlight-knight-outro.ogg',
+        '001-beginning-looped.mp3',
+        '002-white-mountain-looped.mp3',
+        '003-dusk-looped.mp3',
+        '004-salmacis-looped.mp3',
+        '005-suppers-ready-looped.mp3',
+        '006-wardrobe-looped.mp3',
+        '007-fly-looped.mp3',
+        '008-waiting-room-looped.mp3',
+        '009-slippermen-looped.mp3',
+        '010-ravine-looped.mp3',
+        '011-ripples-looped.mp3',
+        '012-unquiet-slumbers-looped.mp3',
+        '013-down-and-out-looped.mp3',
+        '014-duchess-looped.mp3',
+        'moonlight-knight-outro.mp3',
     ],
     fade_in_dur: 10000,
     fade_out_dur: 5000,
@@ -185,6 +185,11 @@ const App = {
 }
 
 ready(() => {
-    App.init();
+    function init() {
+        App.init();
+        document.removeEventListener('click', init);
+    }
+    document.addEventListener('click', init);
+
     window.app = App;
 });
